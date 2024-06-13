@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Grand+Hotel&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --transition: all 0.3s linear;
+}
+
+body {
+  background-color: #f3f3f3;
+  line-height: 1.5;
+}
+
+/* =========
+   animation
+   =========
+*/
+@keyframes SlideFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes SlideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes bouton {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+H2 {
+  text-transform: capitalize;
+  font-family: "Grand Hotel", cursive;
+  color: #521945;
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+  /* animation */
+  animation: SlideFromRight 5s ease-in-out 1;
+}
+h1 {
+  text-transform: capitalize;
+  color: #912f56;
+  letter-spacing: 0.25rem;
+  font-size: 2rem;
+  /* animation */
+  animation: SlideFromLeft 5s ease-in-out 1;
+}
+a {
+  text-decoration: none;
+  color: #912f56;
+  background-color: #521945;
+  padding: 0.71rem 0.4rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+  outline: 3px solid #912f56;
+  outline-offset: 2px;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+  display: inline-block;
+  transition: var(--transition);
+  /* animation */
+  animation: bouton 5s linear 1;
+}
+a:hover {
+  background-color: aqua;
+}
+
+.banner {
+  text-align: center;
+}
+.header {
+  min-height: 100vh;
+  background: url("./images/coffee.jpg") center/cover, no-repeat fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* extra stuff */
+  overflow: hidden;
+}
+.temp {
+  background-color: red;
+  min-height: 100vh;
+}
